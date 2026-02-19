@@ -24,7 +24,7 @@ public class simpleRuleEngine implements ruleEngine{
 
             
         }
-        // Trip level rules
+        // Trip level rules 
             for(TripExpenseRule ter:tripRegistry){
                 Optional<Violation> v=ter.check(expenses);
                 if(v.isPresent()) violations.add(v.get()); 

@@ -14,7 +14,7 @@ public class TripMaxAmount implements TripExpenseRule{
             total+=e.getAmount();
         }
         if(total>amount){
-            return Optional.of(Violation.of("Expense amount exceeds the maximum allowed limit of "));
+            return Optional.of(Violation.of("Expense amount exceeds the maximum allowed limit of "+amount));
         }
         return Optional.empty();
     }

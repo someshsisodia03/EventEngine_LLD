@@ -22,7 +22,7 @@ public class ruleRegistry {
     }
     public List<TripExpenseRule> getAllTripExpenseRules(){
         return List.of(
-            new TripMaxAmount(1000)
+            new TripMaxAmount(100)
         );
     }
 }
