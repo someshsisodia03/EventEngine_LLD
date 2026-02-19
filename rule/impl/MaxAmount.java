@@ -10,7 +10,7 @@ public class MaxAmount implements ExpenseRule{
     @Override
     public Optional<Violation>check(Expense expense){
         if(expense.getAmount()>maxAmount){
-            return Optional.of(Violation.of("Expense amount exceeds the maximum allowed limit of "+maxAmount));
+            return Optional.of(Violation.of(expense.getExpense_type()+" exceeds maximum allowed amount of "+maxAmount));
         }
         return Optional.empty();        
     }
